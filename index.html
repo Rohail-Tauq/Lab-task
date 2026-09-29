@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Configurator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <h1>Custom Smart Watch</h1>
+
+        <p>Design your own smart watch</p>
+
+    </header>
+
+
+    <!-- Main Configurator -->
+
+    <main class="configurator">
+
+        <!-- Product Preview -->
+
+        <section class="preview-section">
+
+            <h2>Product Preview</h2>
+
+            <div
+                class="product-preview"
+                id="productPreview"
+                draggable="true"
+            >
+
+                <div class="watch">
+
+                    <div class="watch-screen">
+
+                        <!-- Top Information -->
+
+                        <div class="watch-top">
+
+                            <span id="watchSmallTime">
+                                12:00
+                            </span>
+
+                            <span>
+                                🔋 87%
+                            </span>
+
+                        </div>
+
+
+                        <!-- Main Time -->
+
+                        <div
+                            class="watch-time"
+                            id="watchTime"
+                        >
+                            12:00
+                        </div>
+
+
+                        <!-- Date -->
+
+                        <div class="watch-date">
+
+                            MON, 28 SEP
+
+                        </div>
+
+
+                        <!-- Health Information -->
+
+                        <div class="watch-info">
+
+                            <span>
+                                ❤️ 72 BPM
+                            </span>
+
+                            <span>
+                                🌡️ 24°C
+                            </span>
+
+                        </div>
+
+
+                        <!-- Engraving -->
+
+                        <div
+                            class="watch-name"
+                            id="engravingPreview"
+                        >
+                            Your Name
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p id="previewMessage">
+                Move your mouse over the product
+            </p>
+
+        </section>
+
+
+        <!-- Product Information -->
+
+        <section class="controls-section">
+
+            <h2>Product Information</h2>
+
+            <h3>Custom Smart Watch</h3>
+
+            <p class="price">
+                $149
+            </p>
+
+            <p
+                id="productDescription"
+                class="description"
+            >
+                A stylish and modern smart watch with fitness
+                tracking, notifications, health monitoring, and
+                a customizable design. Create your own
+                personalized watch with your name or message.
+            </p>
+
+
+            <!-- Configuration Form -->
+
+            <form id="configForm">
+
+                <!-- Watch Color -->
+
+                <div class="form-group">
+
+                    <label for="watchColor">
+                        Choose Watch Color:
+                    </label>
+
+                    <select id="watchColor">
+
+                        <option value="black">
+                            Black
+                        </option>
+
+                        <option value="silver">
+                            Silver
+                        </option>
+
+                        <option value="blue">
+                            Blue
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Engraving -->
+
+                <div class="form-group">
+
+                    <label for="engraving">
+                        Custom Engraving:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="engraving"
+                        placeholder="Enter your name"
+                        maxlength="20"
+                    >
+
+                    <p id="characterCount">
+                        0 / 20 characters
+                    </p>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="buttons">
+
+                    <button type="submit">
+                        Configure Product
+                    </button>
+
+                    <button type="reset">
+                        Reset
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- Form Message -->
+
+            <p id="formMessage"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Shopping Cart -->
+
+    <section class="cart-section">
+
+        <h2>Shopping Cart</h2>
+
+        <div
+            class="cart-drop-area"
+            id="cartDropArea"
+        >
+
+            <p id="cartEmptyMessage">
+                🛒 Configure a product or drag it here
+            </p>
+
+
+            <div id="cartProducts"></div>
+
+
+            <p id="cartCount">
+                Cart Items: 0
+            </p>
+
+        </div>
+
+
+        <p id="cartMessage"></p>
+
+    </section>
+
+
+    <!-- Scroll Message -->
+
+    <p id="scrollMessage"></p>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
